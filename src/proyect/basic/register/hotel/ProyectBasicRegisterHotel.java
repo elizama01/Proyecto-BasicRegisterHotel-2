@@ -5,6 +5,9 @@
  */
 package proyect.basic.register.hotel;
 
+
+import java.util.Scanner;
+
 /**
  *
  * @author pcccasd
@@ -36,36 +39,94 @@ public class ProyectBasicRegisterHotel {
      */
     public static void main(String[] args) {
         //  De lo discutido quedamos en que:
-String []Habitaciones = new String [15];
+Scanner Entrada = new Scanner(System.in) ;
+String []singles = new String [5];
+String []dobles = new String [5];
+String []familiares = new String [5];
 String []usuarios = new String [15];
-String []datosusuarios = new String [15];
-        
- System.out.println("  Bienvenidos a ");
-System.out.println("BasicRegisterHotel");
-        System.out.println("");
-System.out.println("Elija opcion");
-System.out.println("");
-System.out.println("Ver Datos del Hotel");
-System.out.println("");
-System.out.println("Ingresar Mis Datos");
-System.out.println("");
-System.out.println("Ver Habitaciones Disponibles");
-System.out.println("");
-System.out.println("Reservar Habitacion");
-System.out.println("");
-System.out.println("abandonar hotel");
-
+String []datosusuario = new String [6];
+String []precioHabitacion = new String [10];
+String opcion; 
+int opc ; 
+do{       
+  Menu();
+ opcion = Entrada.nextLine();
+ opc = Integer.parseInt(opcion);
+   switch(opc){
+       case 1 :
+           DatosHotel();
+           break; 
+       case 2 :
+           IngresarNombres(Entrada);
+           IngresarApellidos(Entrada);
+           break; 
+       case 3 :
+           break; 
+       case 4 :
+           break; 
+       case 5 :
+           break; 
+       case 6 :
+           break;
+           
+       default:
+           System.out.println("Lo ingresado no es valido!!!! ");
+   }} while(opc<6||opc>0);
     }
     
     
-    public void  DatosHtel (){
+    public static void  DatosHotel (){
+        System.out.println("Hotel Ciudad Del Mar");
+        System.out.println("Ubicado en :   Arturo Prat 234 ");
+        System.out.println("Ciudad : Temuco  ");
+        System.out.println("Horario de atencion: 9:00 a 12:00  y 14:30 a 18;00");
     } 
-    public void  HabitacionesDisponibles (){
+    public static  void Menu (){
+     System.out.println("  Bienvenidos a ");
+System.out.println("BasicRegisterHotel");
+ System.out.println("");
+System.out.println("Elija opcion");
+System.out.println("");
+System.out.println(" 1....Ver Ubicacion del Hotel");
+System.out.println("");
+System.out.println("2.....Ingresar Mis Datos");
+System.out.println("");
+System.out.println("3......Ver Habitaciones Disponibles");
+System.out.println("");
+System.out.println("4.....Reservar Habitacion");
+System.out.println("");
+System.out.println("5.....Terminar  hotel");
+ System.err.println("");
+System.out.println("6.....Salir ");
+    
+    }
+
+    public static  void  HabitacionesDisponibles (
+            
+    ){
     } 
     
-    public void  Ingresarnombres (){}    
+  public static void IngresarNombres(Scanner Entrada){
+      System.out.println("Ingrese Primer Nombre");
+      String Nombre1 = Entrada.nextLine() ; 
+      System.out.println("Ingrese Segundo Nombre");
+        String Nombre2 = Entrada.nextLine() ; 
+       }
+  public static  void IngresarApellidos(Scanner Entrada){
+      System.out.println("Ingrese Primer Apellido");
+      String Apelldo1 = Entrada.nextLine() ; 
+      System.out.println("Ingrese Segundo Apellido");
+        String Apellido = Entrada.nextLine() ; 
+       }
+    public static String [] datosusuario (  String []datosusuario,
+        String nombre1,String nombre2,String apellido1,String Apellido2,
+        String numeroHabitacion,String Estadia,String Precio ){
+    
+        
+    return  ;    }    
     public void  Ingresarapellidos (){} 
-    public static void datosusuario(){}  
+    
+  
     public static void ReservarHabitaciones (){} 
     public static void DiaIngreso (){} 
     public static void DiaSalida (){} 
